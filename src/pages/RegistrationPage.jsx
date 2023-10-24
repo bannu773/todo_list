@@ -5,7 +5,7 @@ import { AuthContext } from '../context/AuthContext';
 import Homebutton from '../components/HomeButton';
 
 const Registrationpage = () => {
-    const baseUrl = 'https://todo-list-15i9.onrender.com/';
+    const baseUrl = 'https://todo-list-15i9.onrender.com';
 
     const navigate = useNavigate();
     const { login } = useContext(AuthContext);
