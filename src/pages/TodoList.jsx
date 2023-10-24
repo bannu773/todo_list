@@ -7,7 +7,7 @@ import Todo from '../components/Todo';
 import { AuthContext } from '../context/AuthContext';
 
 const Todolist = () => {
-    const baseUrl = 'https://todo-list-15i9.onrender.com';
+    const baseUrl = 'https://todo-list-15i9.onrender.com/';
 
     const [value, setValue] = useState({
         title: '',
@@ -21,7 +21,7 @@ const Todolist = () => {
 
     const getTodos = async (token) => {
         try {
-            await axios.get(`${baseUrl}/todo`, {
+            await axios.get(`${baseUrl}todo`, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -57,7 +57,7 @@ const Todolist = () => {
                 return;
             }
 
-            await axios.post(`${baseUrl}/todo/add`, { ...value, id }, {
+            await axios.post(`${baseUrl}todo/add`, { ...value, id }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -75,7 +75,7 @@ const Todolist = () => {
     const deleteTodo = async (id) => {
         try {
 
-            await axios.delete(`${baseUrl}/todo/delete/${id}`, { id }, {
+            await axios.delete(`${baseUrl}todo/delete/${id}`, { id }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -93,7 +93,7 @@ const Todolist = () => {
 
     const updateTodo = async (id) => {
         try {
-            await axios.post(`${baseUrl}/todo/update/${id}`, { ...value }, {
+            await axios.post(`${baseUrl}todo/update/${id}`, { ...value }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -108,7 +108,7 @@ const Todolist = () => {
     const changeTodo = async (id) => {
         try {
 
-            await axios.get(`${baseUrl}/todo/change/${id}`, { id }, {
+            await axios.get(`${baseUrl}todo/change/${id}`, { id }, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
