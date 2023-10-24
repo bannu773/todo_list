@@ -7,7 +7,7 @@ import Todo from '../components/Todo';
 import { AuthContext } from '../context/AuthContext';
 
 const Todolist = () => {
-    const baseUrl = 'https://todo-list-15i9.onrender.com/';
+    const baseUrl = 'https://todo-list-15i9.onrender.com';
 
     const [value, setValue] = useState({
         title: '',
@@ -163,4 +163,4 @@ const Todolist = () => {
     );
 };
 
-export default Todolist;
+export default Todolist;git 
